@@ -4,109 +4,108 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1222474961932670"
      crossorigin="anonymous"></script>
     <title>Macronutrient Calculator</title>
+  
     <style>
-        /* CSS styles */
+/* Reset some default styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
 
-        table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 50px;
-    }
+/* Style for the calculator container */
+.calculator {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-    th, td {
-        padding: 8px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-    }
+/* Style for the calculator heading */
+.calculator h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
 
-    th {
-        background-color: #333;
-        color: #fff;
-    }
+/* Style for labels and input elements */
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
 
-    tbody tr:hover {
-        background-color: #c2c2c2;
-    }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 0;
-            background-color: #222;
-            color: #fff;
-        }
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
-        .calculator {
-            max-width: 400px;
-            margin: 0 auto;
-        }
+/* Style for custom meal inputs */
+#custom-meal {
+    display: none;
+}
 
-        h1 {
-            text-align: center;
-        }
+/* Style for buttons */
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
 
-        label {
-            display: block;
-            margin-top: 10px;
-        }
+/* Style for the meal list */
+.meal-list {
+    margin-top: 20px;
+}
 
-        input[type="number"] {
-            width: 100%;
-            padding: 5px;
-            margin-top: 5px;
-        }
+.meal-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+}
 
-        button {
-            margin-top: 10px;
-            padding: 8px 16px;
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
+.meal-number {
+    font-weight: bold;
+}
 
-        button:hover {
-            background-color: #45a049;
-        }
+/* Style for the total display */
+#total {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
 
-        h2 {
-            margin-top: 20px;
-        }
 
-        p#total {
-            font-weight: bold;
-        }
 
-        .meal-list {
-            margin-top: 20px;
-            font-size: 16px;
-        }
-
-        .meal-item {
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .meal-item:last-child {
-            border-bottom: none;
-        }
-
-        .meal-number {
-            font-weight: bold;
-        }
-
-        .meal-info {
-            margin-left: 10px;
-        }
     </style>
+  
 
 </head>
 <body>
+
     <div class="calculator">
         <h1>Macronutrient Calculator</h1>
+    <strong> <p>This calculate Your meal and it reset every day automatic </p></strong>
+        <p><strong>NB: The macro for each day is stored and you can view it by clicking "Print All"</strong></p>
 
         <label for="meal">Select a Meal:</label>
         <select id="meal">
+            <option value="" disabled selected>Select a Meal:</option>
+
             <option value="custom">Custom</option>
             <option value="eggs">boiled Eggs</option>
             <option value="Sceggs">Scrambled Eggs</option>
@@ -121,26 +120,27 @@
         <label for="weight">Weight (in grams):</label>
         <input type="number" id="weight" placeholder="Enter weight">
 
-        <div id="custom-meal">
-            <label for="calories">Calories:</label>
-            <input type="number" id="calories" placeholder="Enter calories">
-
-            <label for="protein">Protein (g):</label>
-            <input type="number" id="protein" placeholder="Enter protein">
-
-            <label for="carbs">Carbs (g):</label>
-            <input type="number" id="carbs" placeholder="Enter carbs">
-        </div>
+            <div id="custom-meal">
+                <label for="calories">Calories:</label>
+                <input type="number" id="calories" placeholder="Enter calories">
+            
+                <label for="protein">Protein (g):</label>
+                <input type="number" id="protein" placeholder="Enter protein">
+            
+                <label for="carbs">Carbs (g):</label>
+                <input type="number" id="carbs" placeholder="Enter carbs">
+            </div>
+            
 
         <button onclick="updateTotals()">Add</button>
         <button onclick="calculateTotal()">Calculate Total</button>
         <button onclick="deleteLastMeal()">Delete</button>
 
 
-         <!--
-          <button onclick="resetData()" >Reset </button >
-          -->
+         
         <button onclick="printAllMeals()">Print All</button>
+        <button onclick="resetData()" >Reset "delete all the data"</button >
+
 
 
         <h2>Total:</h2>
@@ -150,6 +150,8 @@
             <h2>Meals:</h2>
             <div id="mealList"></div>
         </div>
+
+
         <div id="printArea"></div>
 
     </div>
@@ -158,18 +160,28 @@
 
 
 
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-1222474961932670"
-        data-ad-slot="your-ad-slot-id"
-        data-ad-format="auto"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 
 
-    <!-script->
+    
+
+
+
     <script>
+
+        // Add this code inside your JavaScript script tag
+document.addEventListener("DOMContentLoaded", function () {
+    const mealSelect = document.getElementById("meal");
+    const customMealDiv = document.getElementById("custom-meal");
+
+    mealSelect.addEventListener("change", function () {
+        if (mealSelect.value === "custom") {
+            customMealDiv.style.display = "block"; // Show the custom meal fields
+        } else {
+            customMealDiv.style.display = "none"; // Hide the custom meal fields
+        }
+    });
+});
+
         // JavaScript code
         // Get today's date as a string (YYYY-MM-DD)
         function getTodayDate() {
