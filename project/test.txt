@@ -1,0 +1,1 @@
+we shoulld check when the user register wither he is active or not and it give him a meesege for that

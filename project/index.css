@@ -1,0 +1,250 @@
+	/* styles for the search bar */
+	body {
+		font-family: Arial, sans-serif;
+		font-size: 16px;
+		line-height: 1.5;
+		color: #333;
+	  }
+h1, h2, h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #00b3ff;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00b3ff;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #007acc;
+}
+
+.search-container {
+		float: right;
+		margin-top: 15px;
+}
+
+input[type=text] {
+		padding: 6px;
+		margin-top: -3px;
+		font-size: 12px;
+		border: none;
+		border-radius: 4px;
+}
+
+input[type=text]:focus {
+		outline: none;
+}
+
+button[type=submit] {
+		float: right;
+		padding: 6px 10px;
+		margin-top: 8px;
+		margin-right: 16px;
+		background-color: #ddd;
+		font-size: 17px;
+		border: none;
+		cursor: pointer;
+		border-radius: 4px;
+}
+
+button[type=submit]:hover {
+		background-color: #ccc;
+}
+
+		/* Set a default font size and color for the entire website */
+		/* Reset default margins and padding */
+		* {
+		  margin: 0;
+		  padding: 0;
+		  box-sizing: border-box;
+		}
+
+		/* Set a default font family and size for the entire website */
+		body {
+		  font-family: 'Roboto', sans-serif;
+		  font-size: 16px;
+		  color: #eee;
+		  background-color: #222;
+		}
+
+		/* Style the header */
+		header {
+		  background-color: #111;
+		  color: #fff;
+		  padding: 20px;
+		  text-align: center;
+		}
+
+		header h1 {
+		  margin: 0;
+		  font-weight: bold;
+		  font-size: 36px;
+		  text-transform: uppercase;
+		  animation: shake 0.5s ease-in-out 1s both;
+		}
+
+		/* Style the navigation bar */
+		nav {
+		  background-color: #333;
+		  padding: 10px;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  position: sticky;
+		  top: 0;
+		  z-index: 1;
+		}
+
+		nav ul {
+		  list-style: none;
+		  margin: 0;
+		  padding: 0;
+		  display: flex;
+		}
+
+		nav li {
+		  margin-right: 20px;
+		  position: relative;
+		}
+
+		nav li:before {
+		  content: "";
+		  position: absolute;
+		  bottom: 0;
+		  left: 0;
+		  height: 3px;
+		  width: 0%;
+		  background-color: #eee;
+		  transition: all 0.3s ease-in-out;
+		}
+
+		nav li:hover:before {
+		  width: 100%;
+		}
+
+		nav a {
+		  color: #eee;
+		  text-decoration: none;
+		  font-weight: bold;
+		  text-transform: uppercase;
+		  transition: all 0.3s ease-in-out;
+		}
+
+		nav a:hover {
+		  color: #fff;
+		  background-color: #444;
+		}
+
+		/* Style the main content */
+		main {
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		  padding: 20px;
+		}
+
+		section {
+		  background-color: #333;
+		  box-shadow: 0 0 8px rgba(0,215,255,0.5);
+		  margin: 111px;
+		  padding: 30px;
+		  width: 400px;
+		  text-align: center;
+		  position: relative;
+		  overflow: hidden;
+		  cursor: pointer;
+		  transition: all 0.5s ease-in-out;
+
+		}
+
+		div section:hover  {
+		  transform: scale(1.1);
+		  box-shadow: 0 0 30px rgb(250,243,230);
+		}
+		div section {
+			background-color: #333;
+			box-shadow: 0 0 8px rgb(250,243,230);
+			margin: 111px;
+			padding: 30px;
+			width: 400px;
+			text-align: center;
+			position: relative;
+			overflow: hidden;
+			cursor: pointer;
+			transition: all 0.5s ease-in-out;
+		}
+
+		section:hover {
+			transform: scale(1.1);
+			box-shadow: 0 0 30px rgba(0,215,255,0.5);
+		}
+
+		section:before {
+		  content: "";
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  height: 100%;
+		  width: 0%;
+			background-color: linen;
+		  transition: all 0.3s ease-in-out;
+		}
+
+		section:hover:before {
+		  width: 100%;
+		}
+
+		section h2 {
+		  margin-top: 0;
+		  font-size: 20px;
+		  font-weight: bold;
+		  text-transform: uppercase;
+		}
+
+		section p {
+		  margin-bottom: 20px;
+		  font-size: 15px;
+		}
+
+		section img {
+		  max-width: 100%;
+		  margin-bottom: 20px;
+		  transition: all 0.3s ease-in-out;
+		}
+
+		section:hover img {
+		  filter: brightness(50%);
+		}
+
+		/* Style the footer */
+		footer {
+		  background-color: #111;
+		  color: #eee;
+		  padding: 10px;
+		  text-align: center;
+		  position: fixed;
+		  bottom
+}
+

@@ -1,0 +1,154 @@
+/* Reset some default styles to ensure consistency */
+body, h1, h2, p, table {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a background color for the body */
+body {
+  background-color: #222; /* Dark background color */
+  font-family: Arial, sans-serif;
+  color: #fff; /* White text */
+}
+
+/* Style the header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  z-index: 1000; /* Ensure the header is on top of other elements */
+}
+
+header h1 {
+  font-size: 2.3rem;
+  margin: 0;
+}
+
+nav {
+  position: fixed;
+  top: 70px; /* Adjust the top value based on the header height */
+  left: 0;
+  width: 100%;
+  background-color: #333; /* Dark navigation background color */
+  padding: 10px;
+  text-align: center;
+  z-index: 100; /* Add a z-index to ensure it appears above other content */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  background-color: #333; /* Match the background color of the navigation */
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 15px;
+  
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff; /* White text for navigation links */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #007acc;
+}
+
+header h1 {
+  font-size: 36px;
+}
+
+/* Style the main content */
+main {
+  padding: 20px;
+}
+
+/* Style sections */
+section {
+  background-color: #333; /* Dark content background color */
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Lighter box shadow */
+}
+
+/* Style section headings */
+section h2 {
+  font-size: 24px;
+  color: #fff; /* White text color for headings */
+}
+
+/* Style paragraph text */
+section p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ccc; /* Light gray text color */
+}
+
+/* Style the table */
+table {
+  width: 75%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  table-layout: fixed;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #111; /* Darker border color */
+  width: 20%;
+}
+
+table th {
+  background-color: #222;
+  color: #fff;
+}
+table tr:hover {
+  background-color: #b3afaf;
+  color: #111;
+}
+
+/* Style the footer */
+footer {
+  background-color: #111; /* Dark footer background color */
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Footer Styles */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+.contact-info i {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #007acc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}

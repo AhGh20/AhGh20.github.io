@@ -1,0 +1,141 @@
+/* Reset some default styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111; /* Dark background color */
+    color: #fff; /* Light text color */
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #111; /* Dark header background color */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 2.3rem;
+    margin: 0;
+}
+
+nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Dark navigation background color */
+    padding: 10px;
+    text-align: center;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    background-color: #333;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* White text for navigation links */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #007acc; /* Hover color */
+}
+
+/* Style for the calculator container */
+.calculator {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #222; /* Dark background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the calculator heading */
+.calculator h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff; /* Light text color */
+}
+
+/* Style for labels and input elements */
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #fff; /* Light text color */
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #333; /* Dark input background color */
+    color: #fff; /* Light text color */
+}
+
+/* Style for custom meal inputs */
+#custom-meal {
+    display: none;
+}
+
+/* Style for buttons */
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Style for the meal list */
+.meal-list {
+    margin-top: 20px;
+}
+
+.meal-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #444; /* Darker background color */
+    color: #fff; /* Light text color */
+}
+
+.meal-number {
+    font-weight: bold;
+}
+
+/* Style for the total display */
+#total {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    color: #fff; /* Light text color */
+}

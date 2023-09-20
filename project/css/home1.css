@@ -1,0 +1,159 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222; /* Dark background color */
+    color: #fff; /* White text */
+}
+
+img {
+    width: 612px;
+    height: 408px;
+    object-fit: cover;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #111; /* Dark header background color */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 2.3rem;
+    margin: 0;
+}
+
+nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Dark navigation background color */
+    padding: 10px;
+    text-align: center;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    background-color: #333;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* White text for navigation links */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #007acc; /* Hover color */
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+main section {
+    flex-basis: calc(33.33% - 20px);
+    background-color: #333; /* Dark content background color */
+    padding: 20px;
+    margin-top: 120px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Lighter box shadow */
+    transition: transform 0.5s ease;
+}
+
+main section:hover {
+    transform: translateY(-5px);
+}
+
+main h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+main p {
+    color: #ccc; /* Light gray text */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #111; /* Dark footer background color */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Button Styles (Light Mode) */
+button {
+  background-color: #007acc; /* Light blue background color */
+  color: #fff; /* White text color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Button Styles (Dark Mode) */
+button {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* White text color */
+}
+
+/* Button Hover Effect (Light Mode) */
+button:hover {
+  background-color: #005eaa; /* Slightly darker blue on hover */
+}
+
+/* Button Hover Effect (Dark Mode) */
+button:hover {
+  background-color: #111; /* Darker background color on hover */
+}
+
+
+
+body {
+	transition: background-color 0.5s ease, color 0.5s ease;
+  }

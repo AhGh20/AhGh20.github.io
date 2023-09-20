@@ -1,0 +1,168 @@
+/* Reset some default styles to ensure consistency */
+body, h1, h2, p, table {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a background color for the body */
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  z-index: 1000; /* Ensure the header is on top of other elements */
+}
+
+header h1 {
+  font-size: 2.3rem;
+  margin: 0;
+  color: white; /* Add text color for better visibility */
+
+}
+nav {
+  position: fixed;
+  top: 70px; /* Adjust the top value based on the header height */
+  left: 0;
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: 10px;
+  text-align: center;
+  z-index: 100; /* Add a z-index to ensure it appears above other content */
+
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  background-color: #f4f4f4; /* Match the background color of the header */
+
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #007acc;
+}
+
+header h1 {
+  font-size: 36px;
+}
+
+/* Style the main content */
+main {
+  padding: 20px;
+}
+
+/* Style sections */
+section {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style section headings */
+section h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Style paragraph text */
+section p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+}
+
+/* Style the table */
+table {
+  width: 75%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  table-layout: fixed; /* Add this line to ensure fixed column width */
+
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  width: 20%; /* Adjust this value as needed to set the desired column width */
+
+}
+
+table th {
+  background-color: #333;
+  color: #fff;
+}
+table tr:hover {
+  background-color: rgb(189, 188, 188);
+
+  color: #fefafa;
+}
+
+/* Style the footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+/* Footer Styles */
+footer {
+  background-color: #333; /* Use the same color as the header */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+
+.contact-info i {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #007acc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+
+/* Add additional styles as needed */

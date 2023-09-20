@@ -1,0 +1,141 @@
+/* Reset some default styles for consistency */
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a background color for the body */
+body {
+  background-color: #222; /* Dark background color */
+  font-family: Arial, sans-serif;
+  color: #fff; /* White text */
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  z-index: 1000; /* Ensure the header is on top of other elements */
+}
+
+header h1 {
+  font-size: 2.3rem;
+  margin: 0;
+}
+#head {
+  color: linen; /* Light text color */
+  padding: 40px; /* Add padding for better visibility */
+  margin-bottom: -3%;
+
+}
+nav {
+  position: fixed;
+  top: 70px; /* Adjust the top value based on the header height */
+  left: 0;
+  width: 100%;
+  background-color: #333; /* Dark navigation background color */
+  padding: 10px;
+  text-align: center;
+  z-index: 100; /* Add a z-index to ensure it appears above other content */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  background-color: #333; /* Match the background color of the navigation */
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff; /* White text for navigation links */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #007acc;
+}
+
+/* Style the main content */
+main {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+article {
+  background-color: #333; /* Dark content background color */
+  margin: 50px;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.1); /* Lighter box shadow */
+  max-width: 450px;
+  text-align: center;
+  transition: transform 0.5s ease;
+}
+
+
+
+
+article h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+article:hover {
+  transform: translateY(-30px);
+}
+
+img {
+  width: 100%;
+  max-height: 300px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff; /* White text color for paragraphs */
+}
+
+/* Style the footer */
+footer {
+  background-color: #111; /* Dark footer background color */
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.contact-info i {
+  margin-right: 5px;
+}
+
+/* Style the links */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

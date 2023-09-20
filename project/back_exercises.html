@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Back Exercises - Fitness Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link id="stylesheet" rel="stylesheet" href="css/workout.css">
+
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Gymee Website</h1>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="chest_exercises.html">Chest</a></li>
+          <li><a href="leg_exercises.html">Legs</a></li>
+          <li><a href="shoulder_exercises.html">Shoulders</a></li>
+          <li><a href="triceps_exercises.html">Triceps</a></li>
+          <li><a href="biceps_exercises.html">Biceps</a></li>
+          <li><a href="core_exercises.html">Core</a></li>
+          <li><a href="workout_plan.html">Workout palns</a></li>
+          <li><a href="calc.html">Macro Calculator</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <br><br><br><br><br>
+
+  <h1 id="head"> BEST BACK WORKOUTS</h1>
+  
+
+  <main>
+    
+    <article>
+      <h2>Machine Pump Back Workout</h2>
+      <img src="BACK/back6.jpg" alt="Machine Pump Back Workout">
+      <p >Lat pull-down is a great exercise for targeting the latissimus dorsi muscle in the back. To perform this exercise, sit at a lat pull-down machine and grab the bar with an overhand grip. Pull the bar down towards your chest, keeping your elbows close to your body, and then slowly release it back up to the starting position.</p>
+    </article>
+
+    <article>
+      <h2>Deadlifts</h2>
+      <img src="BACK/back3.jpg" alt="Deadlifts">
+      <p>Deadlifts are a compound exercise that targets multiple muscles, including the lower back. Stand with your feet hip-width apart and a barbell in front of you. Bend at your hips and knees to lower your body and grasp the bar with an overhand grip. Lift the bar by extending your hips and standing up straight. Lower it back to the ground with control.</p>
+    </article>
+
+    <article>
+      <h2>Bent-Over Row</h2>
+      <img src="BACK/back2.jpg" alt="Bent-Over Row">
+      <p>Bent-over row is an effective exercise for targeting the muscles in the upper and middle back, as well as the rear shoulders and biceps. To perform this exercise, stand with your feet shoulder-width apart and hold a barbell with an overhand grip. Bend forward at the waist and lower the barbell towards the ground, keeping your back straight. Pull the barbell up towards your chest, squeezing your shoulder blades together, and then lower it back down to the starting position.</p>
+    </article>
+
+    <article>
+      <h2>Pull-Up</h2>
+      <img src="BACK/back1.jpg" alt="Pull-Up">
+      <p>Pull-ups are an excellent bodyweight exercise for strengthening the muscles in the back, arms, and shoulders. To perform a pull-up, grab a pull-up bar with an overhand grip and hang from the bar. Pull yourself up towards the bar until your chin is above the bar, and then lower yourself back down to the starting position.</p>
+    </article>
+
+    <article>
+      <h2>T-Bar Row</h2>
+      <img src="BACK/back4.jpg" alt="T-Bar Row">
+      <p>T-bar row is a great exercise for targeting the muscles in the upper back, rear shoulders, and biceps. To perform this exercise, stand with your feet shoulder-width apart and hold the bar with an underhand grip. Bend forward at the waist and lower the bar towards the ground. Pull the bar up towards your chest, squeezing your shoulder blades together, and then lower it back down to the starting position.</p>
+    </article>
+
+    <article>
+      <h2>Seated Row</h2>
+      <img src="BACK/back5.jpg" alt="Seated Row">
+      <p>Seated row is an effective exercise for targeting the muscles in the upper and middle back, as well as the rear shoulders and biceps. To perform this exercise, sit at a cable row machine with your feet on the footrests and grab the handles with an overhand grip. Pull the handles towards your chest, squeezing your shoulder blades together, and then slowly release them back to the starting position.</p>
+    </article>
+
+    <article>
+      <h2>Lat Pull-Down</h2>
+      <img src="BACK/back7.jpg" alt="Lat Pull-Down">
+      <p>Lat pull-down is a great exercise for targeting the latissimus dorsi muscle in the back. To perform this exercise, sit at a lat pull-down machine and grab the bar with an overhand grip. Pull the bar down towards your chest, keeping your elbows close to your body, and then slowly release it back up to the starting position.</p>
+    </article>
+
+    <article>
+      <h2>Lower Back</h2>
+      <img src="BACK/back8.jpg" alt="Lower Back">
+      <p>To strengthen your lower back, you can perform exercises like hyperextensions or supermans. Lie face down on the floor, and either lift your upper body and legs off the ground simultaneously (supermans) or just your upper body (hyperextensions). Hold for a moment, then lower back down.</p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i> Email: your_email@example.com</p>
+      <p><i class="fas fa-phone"></i> Phone: +20 127 994-3397</p>
+      <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ahmed-al-ghazzali-86639a244/" target="_blank">LinkedIn</a></p>
+    </div>
+    <p>&copy; 2023 Fitness Website</p>
+  </footer>
+
+
+    <script>
+      // Check if the user has a preferred mode in local storage
+      const preferredMode = localStorage.getItem("preferredMode");
+      
+      // Define your stylesheet and button elements
+      const stylesheet = document.getElementById("stylesheet");
+      
+      // Function to apply dark mode
+      function applyDarkMode() {
+        stylesheet.href = "css/dark-workout.css"; // Change to your light mode stylesheet
+
+      }
+      
+      // Function to apply light mode
+      function applyLightMode() {
+        stylesheet.href = "css/workout.css"; // Change to your dark mode stylesheet
+
+
+      }
+      
+      // Check and apply the preferred mode on page load
+      if (preferredMode === "dark") {
+          applyDarkMode();
+      } else {
+          applyLightMode();
+      }
+      
+      // Add event listener for the dark mode toggle
+      toggleButton.addEventListener("click", () => {
+          if (stylesheet.href.includes("workout.css")) {
+              applyLightMode();
+              localStorage.setItem("preferredMode", "light");
+          } else {
+              applyDarkMode();
+              localStorage.setItem("preferredMode", "dark");
+          }
+      });
+      </script>
+      
+</body>
+</html>

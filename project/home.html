@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Fitness Website</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link id="stylesheet" rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+	<header>
+			  <h1>Gymee Website</h1>
+	<!-- Add this code in your HTML, preferably within the <header> or at the top of your page -->
+
+  
+	</header>
+
+
+	<nav>
+		<ul>
+			<li><a href="#back">Back</a></li>
+			<li><a href="#chest">Chest</a></li>
+			<li><a href="#legs">Legs</a></li>
+			<li><a href="#shoulders">Shoulders</a></li>
+			<li><a href="#Triceps">Triceps</a></li>
+			<li><a href="#Biceps">Biceps</a></li>
+			<li><a href="#core">Core</a></li>
+			<li><a href="#plan">Workout palns</a></li>
+			<li><a href="calc.html">Macro Calculator</a></li>
+			      <li><a href="forearm_exercises.html">Forearm</a></li>
+
+			<button id="toggleButton">🌙</button>
+
+
+		</ul>
+	</nav>
+
+	<br><br><br>
+	<main>
+		<section id="plan">
+			<h2>Workout plans</h2>
+			<a href="workout_plan.html"><img src="ICON/core.jpg" alt="Core exercises"></a>
+			<p>Information about different types of workouts palns that will help you build muscles.</p>
+		
+		</section>
+
+		<section id="macro">
+			<h2>Macro</h2>
+			<a href="calc.html"><img src="ICON/core.jpg" alt="Core exercises"></a>
+			<p>Here you can calculate your macro intake everyday</p>
+		
+		</section>
+		<section id="back">
+			<h2>Back Exercises</h2>
+			<a href="back_exercises.html"><img src="ICON/back.jpg" alt="Back exercises"></a>
+			<p>Information about different back exercises and workouts goes here.</p>
+		</section>
+		
+		<section id="chest">
+			<h2>Chest Exercises</h2>
+			<a href="chest_exercises.html"><img src="ICON/chest.jpg" alt="Chest exercises"></a>
+			<p>Information about different chest exercises and workouts goes here.</p>
+		</section>
+		<section id="legs">
+			<h2>Leg Exercises</h2>
+			<a href="leg_exercises.html"><img src="ICON/legs.jpg" alt="Leg exercises"></a>
+			<p>Information about different leg exercises and workouts goes here.</p>
+		</section>
+
+		<section id="shoulders">
+				<h2>Shoulder Exercises</h2>
+				<a href="shoulder_exercises.html"><img src="ICON/shoulders.jpg" alt="Shoulder exercises"></a>
+				<p>Information about different shoulder exercises and workouts goes here.</p>
+		</section>
+
+		<section id="Triceps">
+	        <h2>Triceps</h2>
+	        <a href="triceps_exercises.html"><img src="ICON/triceps.jpg" alt="Triceps exercises"></a>
+	        <p>Information about different triceps exercises and workouts goes here.</p>
+
+
+	</section>
+
+	<section id="Biceps">
+		<h2>Biceps</h2>
+
+		<a href="biceps_exercises.html"><img src="ICON/arms.jpg" alt="Biceps exercises"></a>
+		<p>Information about different biceps exercises and workouts goes here.</p>
+	</section>
+
+	<section id="Forearm">
+		<h2>Forearm Exercises</h2>
+		<a href="forearm_exercises.html"><img src="ICON/core.jpg" alt="Forearm exercises"></a>
+		<p>Information about different forearm exercises and workouts goes here.</p>
+	  </section>
+	  
+
+<section id="core">
+	<h2>Core Exercises</h2>
+	<a href="core_exercises.html"><img src="ICON/core.jpg" alt="Core exercises"></a>
+	<p>Information about different core exercises and workouts goes here.</p>
+
+</section>
+
+
+	</main>
+	<footer>
+	<div class="contact-info">
+		<p><i class="fas fa-envelope"></i> Email: your_email@example.com</p>
+		<p><i class="fas fa-phone"></i> Phone: +20  127 994-3397</p>
+		<p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ahmed-al-ghazzali-86639a244/" target="_blank">LinkedIn</a></p>
+	  </div>
+	  <p>&copy; 2023 Fitness Website</p>
+	</footer>
+
+	
+
+<!-- ... (your HTML) ... -->
+
+<script>
+// Check if the user has a preferred mode in local storage
+const preferredMode = localStorage.getItem("preferredMode");
+
+// Define your stylesheet and button elements
+const stylesheet = document.getElementById("stylesheet");
+const toggleButton = document.getElementById("toggleButton");
+
+// Function to apply dark mode
+function applyDarkMode() {
+  // Apply the second stylesheet (dark mode)
+  stylesheet.href = "css/home1.css";
+  // Add a class to body for dark mode
+  document.body.classList.add("dark-mode");
+  toggleButton.textContent = "☀️ Light Mode";
+}
+
+// Function to apply light mode
+function applyLightMode() {
+  // Apply the first stylesheet (light mode)
+  stylesheet.href = "css/index.css";
+  // Remove the class for dark mode
+  document.body.classList.remove("dark-mode");
+  toggleButton.textContent = "🌙 Dark Mode";
+}
+
+// Check and apply the preferred mode on page load
+if (preferredMode === "dark") {
+  applyDarkMode();
+} else {
+  applyLightMode();
+}
+
+// Add event listener for the dark mode toggle
+toggleButton.addEventListener("click", () => {
+  if (stylesheet.href.includes("index.css")) {
+    applyDarkMode();
+    localStorage.setItem("preferredMode", "dark");
+  } else {
+    applyLightMode();
+    localStorage.setItem("preferredMode", "light");
+  }
+});
+
+	</script>
+	
+	
+</body>
+
+
+</html>
